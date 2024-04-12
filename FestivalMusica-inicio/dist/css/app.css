@@ -555,3 +555,81 @@ img {
 .fondo {
   background-image: radial-gradient(circle, rgba(215, 91, 144, 0.513) 0%, rgba(90, 149, 216, 0.502) 100%);
 }
+
+.lineup {
+  background-image: radial-gradient(circle, rgba(227, 114, 208, 0.513) 0%, rgba(103, 217, 243, 0.502) 100%);
+  padding: 5rem 0;
+}
+.lineup h3, .lineup p {
+  color: #FFFFFF;
+  text-align: center;
+}
+.lineup .dia {
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+.escenario {
+  padding-top: 2rem;
+}
+.escenario p::after {
+  content: " ";
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  background-repeat: no-repeat;
+  background-size: 15rem;
+  background-position: center center;
+  margin: 2rem auto 0 auto;
+}
+
+.edm .nombre-escenario::after {
+  background-image: url("/dist/img/icono_edm.png");
+}
+
+.rock .nombre-escenario::after {
+  background-image: url("/dist/img/icono_rock.png");
+}
+
+.calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario span {
+  font-weight: 400;
+}
+
+@media (min-width: 1200px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+.escenarios-contenedor p {
+  text-align: center;
+  color: #000000;
+}
+
+.bg-red {
+  background-color: #e4df96;
+  padding: 4rem;
+  border-radius: 1rem;
+}
+.bg-red li:nth-child(odd) {
+  background-color: #dad36d;
+}
+
+.bg-verde {
+  background-image: radial-gradient(circle, rgba(215, 91, 144, 0.513) 0%, rgba(90, 149, 216, 0.502) 100%);
+  padding: 4rem;
+  border-radius: 1rem;
+}
+.bg-verde li:nth-child(odd) {
+  background-color: #b37bb9;
+}

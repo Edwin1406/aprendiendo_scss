@@ -22,6 +22,9 @@
     }
 }
 
+// me crea un grid con las columnas que le pase y el espaciado que le pase
+// para movil sirve en 1 columna y para tablet en 2 columnas
+
 @mixin grid($columnas, $espaciado) {
     display: grid;
     grid-template-columns: repeat($columnas, 1fr);

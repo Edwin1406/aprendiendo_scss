@@ -1,0 +1,85 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.lineup{
+    background-image: v.$lineup-bg;
+    padding: 5rem 0;
+    h3,p {
+        color: v.$blanco;
+        text-align: center;
+    }
+    .dia{
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+    }
+    
+}
+
+.escenario{
+    padding-top: 2rem;
+    // para el icono
+    p{
+        &::after{
+            content: ' ';
+            display: block;
+            width: 20rem;
+            height: 10rem;
+            // background-color: v.$blanco;
+            background-repeat: no-repeat;
+            background-size: 15rem;
+            background-position: center  center;
+            margin: 2rem auto 0 auto;
+        }
+    }
+}
+
+.edm .nombre-escenario::after{
+    background-image: url('/dist/img/icono_edm.png');
+
+    
+}
+.rock .nombre-escenario::after{
+    background-image: url('/dist/img/icono_rock.png');
+}
+
+// calendario 
+
+.calendario{
+    @include m.resetear-lista;
+    li{
+        // para dar espacio entre los elementos sangria de 2.5
+        padding: 2.5rem;
+        font-weight: 700;
+    }
+    span{
+        font-weight: 400;
+    }
+}
+
+
+.escenarios-contenedor{
+    @include m.desktopXL {
+        @include m.grid(2, 2rem);
+    }
+    p{
+        text-align: center;
+        color:v.$negro;
+    }
+}
+
+.bg-red{
+    background-color: v.$amarillo;
+    padding: 4rem;
+    border-radius: 1rem;
+    li:nth-child(odd){
+        background-color: darken(v.$amarillo, 10%);
+    }
+}
+.bg-verde{
+    background-image: v.$color_fondo_header;
+    padding: 4rem;
+    border-radius: 1rem;
+    li:nth-child(odd){
+        background-color: darken(v.$purpura-oscuro, 10%);
+    }
+}
