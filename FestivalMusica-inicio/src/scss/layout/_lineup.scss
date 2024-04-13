@@ -10,8 +10,10 @@
     }
     .dia{
         text-transform: uppercase;
-        margin-bottom: 5rem;
+        margin: 5rem 0;
     }
+
+  
     
 }
 
@@ -31,6 +33,13 @@
             margin: 2rem auto 0 auto;
         }
     }
+    
+    @include m.pantallas-chicas{
+        margin-bottom: 2rem;
+      }
+    @include m.tablet{
+        margin-bottom: 2rem;
+      }
 }
 
 .edm .nombre-escenario::after{

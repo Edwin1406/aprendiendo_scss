@@ -21,6 +21,11 @@
         @content;
     }
 }
+@mixin pantallas-chicas{
+    @media (min-width: v.$pantallas-chicas) {
+        @content;
+    }
+}
 
 // me crea un grid con las columnas que le pase y el espaciado que le pase
 // para movil sirve en 1 columna y para tablet en 2 columnas
@@ -28,6 +33,7 @@
 @mixin grid($columnas, $espaciado) {
     display: grid;
     grid-template-columns: repeat($columnas, 1fr);
+    // separacion entre las columnas y filas
     gap: $espaciado;
 }
 
@@ -35,4 +41,5 @@
     margin: 0;
     padding:0;
     list-style: none;
+   
 }

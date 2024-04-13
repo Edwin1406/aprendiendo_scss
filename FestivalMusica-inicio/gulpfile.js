@@ -17,6 +17,17 @@ const avif = require('gulp-avif');
 // Javascript
 // const terser = require('gulp-terser-js');
 
+function javascript(done){
+
+    src('src/js/**/*.js')
+        // .pipe( terser() )
+        .pipe( dest('dist/js') )
+    done();
+
+}
+
+
+
 function css( done ) {
     src('src/scss/**/*.scss') // Identificar el archivo .SCSS a compilar
         .pipe( plumber())
@@ -57,8 +68,9 @@ function versionAvif( done ) {
 
 
 function dev( done ) {
+    // para que se ejecute cada vez que se modifique un archivo
     watch('src/scss/**/*.scss', css);
-    // watch('src/js/**/*.js', javascript);
+    watch('src/js/**/*.js', javascript);
     done();
 }
 
@@ -70,8 +82,8 @@ function tarea (done) {
 exports.tarea = tarea;
 
 exports.css = css;
+exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-// exports.dev = dev;
-exports.dev = parallel( imagenes, versionWebp, versionAvif, dev) ;
+exports.dev = parallel( imagenes, versionWebp, versionAvif,javascript, dev) ;

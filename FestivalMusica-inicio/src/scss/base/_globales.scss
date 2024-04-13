@@ -13,10 +13,12 @@ html {
 body {
     font-family: v.$fuente_principal;
     font-size: 1.6rem;
-
+    
+    // para que no se pueda hacer scroll
     &.fijar-body {
         overflow: hidden;
     }
+    
     &.body-scroll {
         padding-top: 8.6rem;
     }
