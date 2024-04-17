@@ -379,6 +379,15 @@ img {
     top: 0;
     position: fixed;
     width: 100%;
+    box-shadow: 0.3rem 0.3rem 0.3rem #333;
+  }
+}
+@media (min-width: 768px) {
+  .header.fijo {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
     box-shadow: 0.1rem 0.2rem 0.3rem #333;
   }
 }
@@ -721,4 +730,81 @@ img {
 }
 .overlay .btn-cerrar:hover {
   cursor: pointer;
+}
+
+.boletos {
+  background-image: radial-gradient(circle, rgba(190, 149, 200, 0.513) 0%, rgba(84, 139, 151, 0.502) 100%);
+  padding: 5rem 0;
+}
+.boletos h3 {
+  text-align: center;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .boletos .contenedor-boletos {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.pase {
+  background-image: radial-gradient(circle, rgba(227, 114, 208, 0.513) 0%, rgba(103, 217, 243, 0.502) 100%);
+  border-radius: 1rem;
+}
+.pase-header p, .pase-footer p {
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0.5rem;
+}
+.pase-header {
+  background-image: radial-gradient(circle, rgba(190, 149, 200, 0.513) 0%, rgba(84, 139, 151, 0.502) 100%);
+  border-radius: 1rem;
+}
+.pase-header p {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+.pase-body {
+  background-image: radial-gradient(circle, rgba(190, 149, 200, 0.513) 0%, rgba(84, 139, 151, 0.502) 100%);
+}
+.pase-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pase-body ul li, .pase-body ul :nth-child(odd) {
+  background-image: radial-gradient(circle, rgba(227, 114, 208, 0.513) 0%, rgba(103, 217, 243, 0.502) 100%);
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #FFFFFF;
+}
+.pase-footer {
+  background-image: radial-gradient(circle, rgba(190, 149, 200, 0.513) 0%, rgba(84, 139, 151, 0.502) 100%);
+  border-radius: 1rem;
+}
+.pase-footer p {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.nombre-pase {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 2rem;
+}
+
+.site-footer {
+  text-align: center;
+  background-image: radial-gradient(circle, rgba(190, 149, 200, 0.513) 0%, rgba(84, 139, 151, 0.502) 100%);
+  padding: 2rem;
+  text-transform: uppercase;
+}
+.site-footer p {
+  color: #FFFFFF;
+  margin: 0;
 }

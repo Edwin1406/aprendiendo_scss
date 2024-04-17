@@ -1,0 +1,83 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.boletos{
+    background-image: v.$fondo-boletos;
+    padding: 5rem 0;
+    h3{
+        text-align: center;
+        color: v.$blanco;
+    }
+
+    .contenedor-boletos{
+        
+        @include m.tablet{
+            margin-top: 0;
+            @include m.grid(2, 5rem);
+         
+        }
+        
+        }
+    }
+
+
+    .pase{
+        background-image: v.$fondo-galeria;
+        border-radius: 1rem;
+         &-header,
+         &-footer{
+            p{
+
+                text-align: center;
+                color: v.$blanco;
+                margin: 0;
+                padding: .5rem;
+            }
+         } 
+
+        
+        &-header{
+            background-image: v.$fondo-boletos;
+            border-radius: 1rem;
+            p{
+                text-transform: uppercase;
+                font-size: 1.7rem;
+            }
+        
+        }
+        
+        &-body{
+            background-image: v.$fondo-boletos;
+            ul{
+                @include m.resetear-lista;
+                li , :nth-child(odd){
+                    background-image: v.$fondo-galeria;
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                    border-bottom: 1px solid v.$blanco;
+                }
+            }
+            
+        }
+        
+        &-footer{
+            background-image: v.$fondo-boletos;
+            border-radius: 1rem;
+            p{
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+
+        }
+    }
+
+
+    .nombre-pase{
+        text-align: center;
+        color: v.$blanco;
+        font-size: 2.5rem;
+
+        margin: 0;
+        padding: 2rem;
+    }
+

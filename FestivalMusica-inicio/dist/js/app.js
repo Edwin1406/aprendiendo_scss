@@ -4,9 +4,70 @@ document.addEventListener('DOMContentLoaded',function(){
   
 
 function inicalizarApp(){
+    // navegacion fija para el header del scroll
+   navegacionFija();
    crearGaleria();
+  //es para que se ejecute la funcion al dar scroll
+   scrollNav();    
 }
 
+// para el header fijo al hacer scroll
+function navegacionFija(){
+    const barra = document.querySelector('.header');
+    const sobreFestival = document.querySelector('.sobre-festival');
+    const body = document.querySelector('body');
+    // para detectar el scroll
+    window.addEventListener('scroll',function(){
+        // bottom es para saber cuando el scroll llega al final de la seccion como en css
+        if(sobreFestival.getBoundingClientRect().bottom < 0){
+            barra.classList.add('fijo');
+            body.classList.add('body-scroll');
+        }else{
+            barra.classList.remove('fijo');
+            body.classList.remove('body-scroll');
+        }
+        
+    });
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// esto es para cuando presiono el boton de menu del nav se vaya a donde pertenece el id 
+function scrollNav(){
+    const enlaces = document.querySelectorAll('.navegacion_principal a');
+    enlaces.forEach(enlace => {
+        enlace.addEventListener('click',function(e){
+            e.preventDefault();
+            // para que se mueva suavemente y me de el id del enlace
+            const seccion = document.querySelector(e.target.attributes.href.value);
+            seccion.scrollIntoView({
+                behavior:'smooth'
+            });
+         
+        } )
+
+        
+    });
+
+}
+
+
+
+
+// funcion para crear la galeria de imagenes
 function crearGaleria(){
     const galeria = document.querySelector('.galeria-imagenes');
     for(let i=1; i<=12; i++){
@@ -84,9 +145,57 @@ function mostrarImagen(id){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // esto hice yo para poder cerrar y dar scroll a la pagina
 // if(overlay){
 //     overlay.remove();
 //    }else{
 //     body.classList.add('body-scroll');
 //    }
+
+
+
+
+    

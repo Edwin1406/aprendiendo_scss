@@ -4,6 +4,19 @@
 .header {
     background-image: v.$color_fondo_header;
 
+    // para darle un poco de estilo al header cuando se haga scroll
+   @include m.tablet {
+    &.fijo{
+        left: 0;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        box-shadow: .3rem .3rem .3rem #333;
+    }
+    
+   }
+
+
     @include m.tablet {
         &.fijo {
             left: 0;
